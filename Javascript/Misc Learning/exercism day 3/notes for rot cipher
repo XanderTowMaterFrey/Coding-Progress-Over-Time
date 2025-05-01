@@ -1,0 +1,14 @@
+| isUpper x     = chr $ mod (ord x - ord 'A' + n) 26 + ord 'A'
+
+ord x -- 97
+ord a -- 97
+:3-:4 (ord k - ord a) -- 0
+:5 + rotateBy = 392
+
+mod :6 26 = 2
+:8 + :4 = 99
+chr :9 = 'c'
+
+rotateBy = 392
+a = 'c'
+b = q

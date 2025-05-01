@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example Page</title>
+</head>
+<body>
+
+	<ul>
+		<li>Mon day</li>
+		<li>Tues day</li>
+		<li>Wednes day</li>
+		<li>Thurs day</li>
+		<li>Fri day</li>
+		<li>Satur day</li>
+		<li>Sun day</li>
+	</ul>
+
+</body>
+</html>

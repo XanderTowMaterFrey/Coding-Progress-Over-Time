@@ -1,0 +1,29 @@
+genericLength :: Num i => [a] -> i
+base Data.List
+The genericLength function is an overloaded
+version of length. In particular, instead of returning an
+Int, it returns any type which is an instance of Num. It
+is, however, less efficient than length.
+
+Examples
+
+
+>>> genericLength [1, 2, 3] :: Int
+3
+
+>>> genericLength [1, 2, 3] :: Float
+3.0
+
+
+Users should take care to pick a return type that is wide enough to
+contain the full length of the list. If the width is insufficient, the
+overflow behaviour will depend on the (+) implementation in
+the selected Num instance. The following example overflows
+because the actual list length of 200 lies outside of the
+Int8 range of -128..127.
+
+
+>>> genericLength [1..200] :: Int8
+-56
+
+

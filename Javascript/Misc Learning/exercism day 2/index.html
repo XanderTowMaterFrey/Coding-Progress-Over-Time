@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Node.js HTML Page</title>
+</head>
+<body>
+    <h1>Hello from Node.js!</h1>
+    <p>This is a dynamically generated HTML page.</p>
+    <script type="text/javascript">
+        function frontDoorResponse(line) {
+          return line[0];
+        }
+
+        const CODE_WORK = [
+            'Compilers intensily bestow',
+            'On commencing without ego',
+            'Different processes ajar',
+            'Exit with zero quickly',
+        ];
+        const expectedLetters = ['C', 'O', 'D', 'E']; // Expected output of frontDoorResponse function
+        const actualOutput = CODE_WORK.map(frontDoorResponse); // Get actual output of frontDoorResponse for each line -- yeah ya silly billy, that type of map 
+        console.log(actualOutput); // Log actual output to console
+    </script>
+</body>
+</html>
+

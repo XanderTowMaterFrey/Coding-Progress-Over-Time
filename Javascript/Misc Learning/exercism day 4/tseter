@@ -1,0 +1,10 @@
+const listy = ["", "5L", "L"];
+
+const checkCondition = (listy) => {
+    const secondItem = listy[1];
+    const thirdItem = listy[2];
+    
+    return secondItem.includes(thirdItem);
+}
+
+console.log(checkCondition(listy)); // Output: true

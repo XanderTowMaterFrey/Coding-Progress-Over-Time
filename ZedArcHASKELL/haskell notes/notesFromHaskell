@@ -1,0 +1,55 @@
+this will be the notes i take
+
+for lists there are various methods, think of these in tandem
+[1,2,3,4]
+
+last and head - takes the last or first element of a list
+4        1
+
+tail and init - removes the last or first element of a list
+[2,3,4]  [1,2,3]
+
+drop int list is a thing that does the same as tail almost without an error
+
+its interesting that list comprehension works how it does
+it will take list 1 elem 1 and then reference list 2 elem 1 elem 2 elem n then it will do list 1 elem 2 and repeat until all of list 1 is done 
+
+ghci> xxs = [[1 ,3 ,5 ,2 ,3 ,1 ,2 ,4 ,5] ,[1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9] ,[1 ,2 ,4 ,2 ,1 ,6 ,3 ,1 ,3 ,2 ,3 ,6]]
+ghci> [[x | x <- xs, even x ] | xs <- xxs ]
+this is interesting to me. it looks like its using list comprehension to feed 3 lists into one lists comprehension, kind of like a for loop that is checking if an elem is even then printing
+
+so a tuple is a list upon first glance, but it has a thing that is it makes unique, it has set types and also a set qty
+so this means that [(1,2),(2,3)] works, [(1,2),(3,4,5)] will not work nor will [(1,2), ("one",3)] work
+this isnt signifigant at first, but the thing is that this is what a json \ dictionary is
+
+you see, tuples are merely objects!
+
+i was wrong about this actually, its not the same as it is not a key and pair, duhhhh
+good for things like vectors, and some db objects, im sure theres other stuff in haskell thats better for some of this stuff tho 
+
+
+this is crazy that this works 
+ghci> rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2]
+its literally just a math rule
+a squared plus b squared = c squared
+
+i need to update haskell hoogle was the thing - check the config anyhow
+
+
+
+the thing about types in haskell is that the type casting starts after the => 
+
+so like this 
+
+ghci> :t (==)
+	(==) :: (Eq a) => a -> a -> Bool
+
+this just states the function is ==
+a -> a -> Bool is the typing 
+(Eq a) just means the variable a has to be of a type within the class of Eq - :info Eq or :hoogle stuff will provide info on that 
+
+ints, integer, doubles and floats are all the same class - Num 
+
+
+the thing about fromIntegral is that it can be used when you need an integer with a non integer - think about this, its a float a real and non real number type thing 
+

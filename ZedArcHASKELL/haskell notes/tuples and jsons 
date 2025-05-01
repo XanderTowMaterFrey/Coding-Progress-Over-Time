@@ -1,0 +1,61 @@
+for x in list 
+	x*7 
+
+
+
+[x*7 | x<- [0,7..147]]
+
+
+
+iterater 
+
+for elem in word - iterater +1
+
+if no elem in word - end
+
+
+
+quadfst :: (a,b,c,d) -> a
+quadfst (a,_,_,_) = a
+
+quadsnd :: (a,b,c,d) -> b
+quadsnd (_,b,_,_) = b
+
+quadtrd :: (a,b,c,d) -> c
+quadtrd (_,_,c,_) = c
+
+quadfth :: (a,b,c,d) -> d
+quadfth (_,_,_,d) = d
+
+tuples are permanent so this is good 
+```
+-- legend
+(
+name,
+num1,
+num2,
+statement
+)
+```
+
+-- implementation of legend
+harperTuple = (
+"harper",
+29,
+9,
+"missing 1"
+)
+
+
+-- json is this 
+harperJSON = {
+name:"harper,
+num1:29,
+num2:2,
+statement:"missing 1"
+}
+
+
+print harperJSON.name
+
+quadfst harperTuple
